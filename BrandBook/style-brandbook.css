@@ -1,0 +1,320 @@
+:root {
+    --color-black: #0F0F0F;
+    --color-ivory: #F3EFEA;
+    --color-terracotta: #B65A3C;
+    --color-warm-gray: #6F6A66;
+    --color-olive: #8A8F7A;
+    --color-coffee: #4A3F39;
+    --color-nude: #D6B8A8;
+    --color-light-gray: #C9C4BF;
+
+    --font-primary-display: 'Playfair Display', 'Cinzel', 'Cormorant Garamond', serif;
+    --font-secondary-sans: 'Montserrat', 'Lato', 'Open Sans', sans-serif;
+}
+
+/* ================================= */
+/* BASE */
+/* ================================= */
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-secondary-sans);
+    background-color: var(--color-ivory);
+    color: var(--color-black);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    counter-reset: section-counter;
+}
+
+.brandbook-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+section {
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: 1px solid var(--color-light-gray);
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ================================= */
+/* CAPA */
+/* ================================= */
+
+.cover-page {
+    text-align: center;
+    padding: 100px 20px;
+    border-bottom: 1px solid var(--color-light-gray);
+    margin-bottom: 60px;
+}
+
+.cover-page h1 {
+    font-family: var(--font-primary-display);
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 20px 0 10px 0;
+}
+
+.cover-page p {
+    font-size: 1.2rem;
+    color: var(--color-warm-gray);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* ================================= */
+/* TITULOS */
+/* ================================= */
+
+h1.section-title {
+    font-family: var(--font-primary-display);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--color-terracotta);
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 70px;
+}
+
+h1.section-title::before {
+    counter-increment: section-counter;
+    content: counter(section-counter) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--color-light-gray);
+}
+
+h2.subsection-title {
+    font-family: var(--font-primary-display);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+h3.item-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-terracotta);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ================================= */
+/* TEXTO */
+/* ================================= */
+
+p, li {
+    font-size: 1rem;
+    color: var(--color-warm-gray);
+    margin-bottom: 1em;
+}
+
+strong {
+    color: var(--color-black);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--color-terracotta);
+    font-weight: bold;
+}
+
+ul.prohibited-list li::before {
+    content: '✖';
+    color: #A94442;
+}
+
+blockquote {
+    border-left: 3px solid var(--color-terracotta);
+    padding-left: 25px;
+    margin: 30px 0;
+    font-family: var(--font-primary-display);
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+/* ================================= */
+/* MANIFESTO */
+/* ================================= */
+
+.manifesto {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--color-ivory);
+    margin: 40px 0;
+}
+
+.manifesto p {
+    font-family: var(--font-primary-display);
+    font-size: 1.5rem;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* ================================= */
+/* TABELAS */
+/* ================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+th {
+    background-color: #FAFAFA;
+}
+
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        border: 1px solid #EAEAEA;
+        border-radius: 12px;
+    }
+
+    th, td {
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+}
+
+/* ================================= */
+/* GRID */
+/* ================================= */
+
+.logo-grid,
+.rules-container,
+.application-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.logo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.rules-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 40px;
+}
+
+.application-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* ================================= */
+/* RESPONSIVO */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+    .brandbook-container {
+        padding: 25px;
+        margin: 20px auto;
+    }
+
+    h1.section-title {
+        font-size: 2rem;
+        padding-left: 50px;
+    }
+
+    h1.section-title::before {
+        font-size: 1.8rem;
+    }
+
+    h2.subsection-title {
+        font-size: 1.3rem;
+    }
+
+    h3.item-title {
+        font-size: 1rem;
+    }
+
+    .manifesto p {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+}
+/* ================================= */
+/* CORES DA MARCA */
+/* ================================= */
+
+.color-swatch {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #EAEAEA;
+    display: inline-block;
+}
+
+.colors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.color-card {
+    border: 1px solid #EAEAEA;
+    padding: 20px;
+    border-radius: 12px;
+    background: #FFFFFF;
+}
+
+.color-card h4 {
+    margin: 15px 0 8px 0;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-black);
+}
+
+.color-card p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+}

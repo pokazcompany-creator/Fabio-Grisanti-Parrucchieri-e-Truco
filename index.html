@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fábio Grisanti Parrucchieri — Eccellenza Estetica</title>
+  <meta name="description"
+    content="Fábio Grisanti Parrucchieri — Esperienza estetica di alto profilo. Diagnosi personalizzata, strategia d'immagine e tecnica internazionale." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" role="navigation" aria-label="Navigazione principale">
+    <a href="index.html" class="navbar__logo" aria-label="Homepage Fábio Grisanti">
+      <span class="navbar__logo-name">Fábio Grisanti</span>
+      <span class="navbar__logo-sub">Parrucchieri</span>
+    </a>
+
+    <ul class="navbar__menu" role="list">
+      <li><a href="index.html" class="navbar__link">Home</a></li>
+      <li><a href="about.html" class="navbar__link">Storia</a></li>
+      <li><a href="services.html" class="navbar__link">Servizi</a></li>
+      <li><a href="services.html#consulenza" class="navbar__link btn btn-outline"
+          style="padding: 0.5rem 1.2rem;">Prenota ora</a></li>
+    </ul>
+
+    <!-- Hamburger for mobile -->
+    <button class="hamburger" aria-label="Apri menu" aria-expanded="false">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav" role="dialog" aria-label="Menu mobile">
+    <a href="index.html" class="navbar__link">Home</a>
+    <a href="about.html" class="navbar__link">Storia</a>
+    <a href="services.html" class="navbar__link">Servizi</a>
+    <a href="services.html#consulenza" class="navbar__link">Consulenza</a>
+  </div>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <video class="hero__video" autoplay muted loop playsinline aria-hidden="true">
+        <source src="../assets/videos/hero-bg.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__inner">
+        <p class="label hero__label">Milano · Formazione Internazionale</p>
+
+        <h1 class="hero__title" id="hero-heading">
+          Eccellenza non è<br />
+          un'<em>opzione</em>.<br />
+          È uno standard.
+        </h1>
+
+        <p class="hero__subtitle">
+          Ogni cliente porta con sé un'identità unica.<br />
+          Il nostro compito è rivelarla con precisione e cura.
+        </p>
+
+        <div class="hero__cta">
+          <a href="services.html" class="btn btn-outline">Scopri i servizi</a>
+        </div>
+      </div>
+      <a href="#chi-siamo" class="hero__scroll" aria-label="Scorri verso il basso">
+        <span class="hero__scroll-text">Scorri verso il basso</span>
+        <span class="hero__scroll-arrow" aria-hidden="true"></span>
+      </a>
+    </section>
+    <!-- ===================== CHI SIAMO ===================== -->
+    <section class="philosophy section" id="chi-siamo" aria-labelledby="chi-siamo-heading">
+      <div class="container">
+        <div class="philosophy__grid">
+
+          <div class="philosophy__text">
+            <p class="label">Chi siamo</p>
+            <h2 class="philosophy__title" id="chi-siamo-heading">
+              Eccellenza tecnica e identita personale
+            </h2>
+            <div class="philosophy__body">
+              <p>
+                Fabio Grisanti Parrucchieri nasce per offrire un servizio premium fondato su ascolto, diagnosi
+                professionale e strategia d'immagine personalizzata.
+              </p>
+              <p>
+                La nostra cliente cerca sicurezza tecnica, risultati prevedibili e uno stile coerente con la propria
+                identita: per questo lavoriamo con metodo, trasparenza e standard internazionali.
+              </p>
+            </div>
+
+            <ul class="philosophy__pillars" aria-label="Pilastri del brand">
+              <li class="philosophy__pillar">
+                <span class="philosophy__pillar-num">01</span>
+                <span class="philosophy__pillar-text">Diagnosi personalizzata prima di ogni procedura</span>
+              </li>
+              <li class="philosophy__pillar">
+                <span class="philosophy__pillar-num">02</span>
+                <span class="philosophy__pillar-text">Formazione internazionale e tecnica avanzata</span>
+              </li>
+              <li class="philosophy__pillar">
+                <span class="philosophy__pillar-num">03</span>
+                <span class="philosophy__pillar-text">Esperienza esclusiva con chiarezza, fiducia e cura</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="philosophy__image" aria-hidden="true">
+            <div class="philosophy__image-placeholder">
+              <img src="BrandBook/Volantino-fronte.png" alt="" class="philosophy__brand-logo" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVIZI IN EVIDENZA ===================== -->
+    <section class="services-preview section" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="services-preview__header">
+          <p class="label">I nostri servizi</p>
+          <h2 class="display-md" id="services-heading" style="color: var(--ivory); margin-top: 0.8rem;">
+            I Servizi Principali
+          </h2>
+        </div>
+
+        <div class="services-preview__carousel" data-services-carousel>
+          <button class="services-nav services-nav--prev" type="button" aria-label="Servizio precedente">
+            &#10094;
+          </button>
+
+          <div class="services-preview__viewport" data-services-viewport>
+            <div class="services-preview__grid" data-services-track>
+              <article class="service-card" style="--service-image: url('img/1.jpeg');">
+                <h3 class="service-card__title">Hair Styling</h3>
+                <a href="services.html#taglio" class="service-card__link" aria-label="Scopri Hair Styling">Scopri</a>
+              </article>
+
+              <article class="service-card" style="--service-image: url('img/2.jpeg');">
+                <h3 class="service-card__title">Color & Highlights</h3>
+                <a href="services.html#colorazione" class="service-card__link"
+                  aria-label="Scopri Color and Highlights">Scopri</a>
+              </article>
+
+              <article class="service-card" style="--service-image: url('img/3.jpeg');">
+                <h3 class="service-card__title">Hair Extensions</h3>
+                <a href="services.html#consulenza" class="service-card__link"
+                  aria-label="Scopri Hair Extensions">Scopri</a>
+              </article>
+
+              <article class="service-card" style="--service-image: url('img/4.jpeg');">
+                <h3 class="service-card__title">Hair Treatments</h3>
+                <a href="services.html#trattamenti" class="service-card__link"
+                  aria-label="Scopri Hair Treatments">Scopri</a>
+              </article>
+
+              <article class="service-card" style="--service-image: url('img/5.jpeg');">
+                <h3 class="service-card__title">Makeup & Eventi</h3>
+                <a href="services.html#consulenza" class="service-card__link"
+                  aria-label="Scopri Makeup and Events">Scopri</a>
+              </article>
+
+              <article class="service-card" style="--service-image: url('img/6.jpeg');">
+                <h3 class="service-card__title">Consulenza Immagine</h3>
+                <a href="services.html#consulenza" class="service-card__link"
+                  aria-label="Scopri Consulenza Immagine">Scopri</a>
+              </article>
+            </div>
+          </div>
+
+          <button class="services-nav services-nav--next" type="button" aria-label="Servizio successivo">
+            &#10095;
+          </button>
+
+        </div>
+      </div>
+      <br /><br /><br />
+      <div class="hero__inner hero__inner--centered">
+        <div class="hero__cta">
+          <a href="services.html" class="btn btn-outline">Scopri i servizi</a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== MANIFESTO ===================== -->
+    <section class="manifesto" aria-label="Il nostro metodo">
+      <div class="manifesto__inner">
+        <p class="label manifesto__label">Il metodo Grisanti</p>
+
+        <div class="manifesto__divider" aria-hidden="true"></div>
+
+        <blockquote class="manifesto__quote">
+          Più di un servizio.<br />
+          Un <em>metodo</em>.
+        </blockquote>
+
+        <p class="manifesto__body">
+          Ogni sessione è una consultazione. Ogni taglio è una decisione costruita sull'analisi. Ogni colore è il
+          risultato di un'osservazione attenta. Non vendiamo trattamenti: elaboriamo soluzioni che durano nel tempo.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== CTA FINALE ===================== -->
+    <section class="cta-final" aria-label="Prenota una consulenza">
+      <div class="container">
+        <div class="cta-final__inner">
+          <div class="cta-final__text">
+            <h2>Inizia dalla consulenza.</h2>
+            <p>Il cambiamento comincia con una conversazione.</p>
+          </div>
+          <a href="services.html#consulenza" class="btn-cta-dark">Richiedi un appuntamento</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <p class="footer__brand-name">Fábio Grisanti</p>
+          <p class="footer__brand-tag">Parrucchieri · Milano</p>
+          <p class="footer__brand-desc">
+            Esperienza estetica di alto profilo. Diagnosi personalizzata, strategia d'immagine e tecnica internazionale
+            al servizio dell'identità del cliente.
+          </p>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Navigazione</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Storia &amp; Formazione</a></li>
+            <li><a href="services.html">Servizi</a></li>
+            <li><a href="services.html#consulenza">Consulenza</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Contatti</p>
+          <div class="footer__info">
+            <p>Via casella 45</p>
+            <p>Milan, Italy 20156</p>
+            <br />
+            <p>+39 329 404 9704</p>
+            <p>fabio.grisanti@hotmail.com</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          © 2026 Fábio Grisanti Parrucchieri. Tutti i diritti riservati.
+        </p>
+        <p class="footer__copyright">
+          Milano · Eccellenza Italiana
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" aria-label="Torna all'inizio">↑</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

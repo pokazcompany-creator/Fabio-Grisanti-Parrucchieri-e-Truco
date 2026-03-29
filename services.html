@@ -1,0 +1,499 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servizi — Fábio Grisanti Parrucchieri</title>
+  <meta name="description" content="I servizi di Fábio Grisanti: taglio artistico, colorazione strategica e correzione tecnica avanzata. Eccellenza estetica su misura." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Services page additional styles -->
+  <style>
+    /* Sticky mini nav for services */
+    .services-nav {
+      background: var(--black-coal);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 0.8rem 0;
+      position: sticky;
+      top: 66px;
+      z-index: 99;
+    }
+
+    .services-nav__inner {
+      display: flex;
+      gap: 2rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .services-nav__inner::-webkit-scrollbar {
+      display: none;
+    }
+
+    .services-nav__link {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray-warm);
+      white-space: nowrap;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .services-nav__link:hover {
+      color: var(--ivory);
+      border-color: var(--terracotta);
+    }
+
+    /* Consulenza form section */
+    .consulenza {
+      background: var(--black-deep);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .consulenza__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-xl);
+      align-items: start;
+    }
+
+    .consulenza__text .label {
+      margin-bottom: 1rem;
+    }
+
+    .consulenza__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 300;
+      color: var(--ivory);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .consulenza__body {
+      font-size: 0.85rem;
+      color: var(--gray-warm);
+      line-height: 1.9;
+      margin-bottom: 2rem;
+    }
+
+    .consulenza__points {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .consulenza__point {
+      display: flex;
+      gap: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--gray-warm);
+    }
+
+    .consulenza__point::before {
+      content: '—';
+      color: var(--terracotta);
+      flex-shrink: 0;
+    }
+
+    /* Contact info box */
+    .contact-box {
+      background: var(--black-coal);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .contact-box__title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--ivory);
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .contact-item__label {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-item__value {
+      font-size: 0.88rem;
+      color: var(--ivory);
+      line-height: 1.5;
+    }
+
+    .contact-item__value a {
+      color: var(--ivory);
+      transition: color 0.2s ease;
+    }
+
+    .contact-item__value a:hover {
+      color: var(--terracotta);
+    }
+
+    .contact-box__divider {
+      height: 1px;
+      background: rgba(255,255,255,0.06);
+      margin: 1.5rem 0;
+    }
+
+    .contact-box__note {
+      font-size: 0.75rem;
+      color: var(--gray-warm);
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    @media (max-width: 900px) {
+      .consulenza__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" role="navigation" aria-label="Navigazione principale">
+    <a href="index.html" class="navbar__logo" aria-label="Homepage Fábio Grisanti">
+      <span class="navbar__logo-name">Fábio Grisanti</span>
+      <span class="navbar__logo-sub">Parrucchieri</span>
+    </a>
+
+    <ul class="navbar__menu" role="list">
+      <li><a href="index.html" class="navbar__link">Home</a></li>
+      <li><a href="about.html" class="navbar__link">Storia</a></li>
+      <li><a href="services.html" class="navbar__link">Servizi</a></li>
+      <li><a href="https://www.instagram.com/fabiogrisanti/" target="_blank"" class="navbar__link btn btn-outline" style="padding: 0.5rem 1.2rem;">Prenota ora</a></li>
+    </ul>
+
+    <button class="hamburger" aria-label="Apri menu" aria-expanded="false">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </nav>
+
+  <div class="mobile-nav" role="dialog" aria-label="Menu mobile">
+    <a href="index.html" class="navbar__link">Home</a>
+    <a href="about.html" class="navbar__link">Storia</a>
+    <a href="services.html" class="navbar__link">Servizi</a>
+    <a href="services.html#consulenza" class="navbar__link">Consulenza</a>
+  </div>
+
+  <main>
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="page-hero__inner">
+          <p class="label page-hero__label">Cosa offriamo</p>
+          <h1 class="page-hero__title" id="services-heading">
+            Servizi costruiti<br/>su <em style="font-style: italic; color: var(--terracotta);">misura</em>
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES NAVIGATION ===================== -->
+      <div class="container">
+        <div class="services-nav__inner">
+          <a href="#taglio" class="services-nav__link">Taglio Artistico</a>
+          <a href="#colorazione" class="services-nav__link">Colorazione Strategica</a>
+          <a href="#correzione" class="services-nav__link">Correzione Tecnica</a>
+          <a href="#trattamenti" class="services-nav__link">Trattamenti Capillari</a>
+          <a href="#consulenza" class="services-nav__link">Consulenza</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===================== LISTA SERVIZI ===================== -->
+    <div class="services-list">
+
+      <!-- SERVIZIO 1: Taglio -->
+      <article class="service-block" id="taglio" aria-labelledby="taglio-title">
+
+        <!-- Immagine -->
+        <div class="service-block__image" aria-hidden="true">
+          <div class="service-block__image-inner" style="background: url('img/1.jpeg') center/cover no-repeat;">
+            <span class="service-block__image-label">01</span>
+          </div>
+        </div>
+
+        <!-- Contenuto -->
+        <div class="service-block__content container fade-in" style="max-width: none;">
+          <p class="service-block__number">Servizio 01</p>
+          <h2 class="service-block__title" id="taglio-title">
+            Taglio Artistico<br/>Personalizzato
+          </h2>
+          <p class="service-block__desc">
+            Il taglio è il fondamento di ogni lavoro. Prima di avvicinarsi alle forbici, procediamo con un'analisi approfondita: morfologia del volto, texture del capello, densità, direzione di crescita e stile di vita del cliente.
+          </p>
+          <p class="service-block__desc">
+            Il risultato è un taglio costruito per durare, per essere gestibile nella quotidianità e per rispondere all'identità specifica di chi lo porta.
+          </p>
+
+          <div class="service-block__details">
+            <div class="service-block__detail">Analisi preliminare della struttura e morfologia</div>
+            <div class="service-block__detail">Taglio eseguito con tecnica secca o bagnata in funzione del capello</div>
+            <div class="service-block__detail">Rifinitura e styling personalizzato</div>
+            <div class="service-block__detail">Consulenza su mantenimento e prodotti</div>
+          </div>
+        </div>
+
+      </article>
+
+      <!-- SERVIZIO 2: Colorazione -->
+      <article class="service-block reverse" id="colorazione" aria-labelledby="colorazione-title">
+
+        <div class="service-block__image" aria-hidden="true">
+          <div class="service-block__image-inner" style="background: url('img/2.jpeg') center/cover no-repeat;">
+            <span class="service-block__image-label">02</span>
+          </div>
+        </div>
+
+        <div class="service-block__content container fade-in" style="max-width: none;">
+          <p class="service-block__number">Servizio 02</p>
+          <h2 class="service-block__title" id="colorazione-title">
+            Colorazione<br/>Strategica
+          </h2>
+          <p class="service-block__desc">
+            Il colore trasforma. Ma un colore sbagliato può compromettere intere stagioni di lavoro. Per questo ogni progetto di colorazione inizia dall'osservazione: carnagione, tono naturale, struttura e obiettivo estetico del cliente.
+          </p>
+          <p class="service-block__desc">
+            Lavoriamo con tecniche di colorazione avanzate — dall'illuminazione volumetrica al balayage tecnico — sempre nel rispetto della salute del capello e della coerenza dell'immagine complessiva.
+          </p>
+
+          <div class="service-block__details">
+            <div class="service-block__detail">Analisi cromatica della carnagione e del tono base</div>
+            <div class="service-block__detail">Progettazione della palette personalizzata</div>
+            <div class="service-block__detail">Colorazione con prodotti professionali di alto livello</div>
+            <div class="service-block__detail">Trattamento di chiusura e protezione cromatica</div>
+          </div>
+        </div>
+
+      </article>
+
+      <!-- SERVIZIO 3: Correzione -->
+      <article class="service-block" id="correzione" aria-labelledby="correzione-title">
+
+        <div class="service-block__image" aria-hidden="true">
+          <div class="service-block__image-inner" style="background: url('img/3.jpeg') center/cover no-repeat;">
+            <span class="service-block__image-label">03</span>
+          </div>
+        </div>
+
+        <div class="service-block__content container fade-in" style="max-width: none;">
+          <p class="service-block__number">Servizio 03</p>
+          <h2 class="service-block__title" id="correzione-title">
+            Correzione Tecnica<br/>Avanzata
+          </h2>
+          <p class="service-block__desc">
+            Interventi che richiedono preparazione specifica e diagnosi accurata. La correzione tecnica è il servizio più complesso che offriamo, e anche quello che richiede maggiore onestà e chiarezza nella comunicazione con il cliente.
+          </p>
+          <p class="service-block__desc">
+            Riequilibrio cromatico, ripristino della struttura dopo trattamenti chimici aggressivi, correzione di tagli compromessi: ogni caso è analizzato singolarmente, con un piano d'intervento costruito nel tempo.
+          </p>
+
+          <div class="service-block__details">
+            <div class="service-block__detail">Diagnosi approfondita dello stato del capello</div>
+            <div class="service-block__detail">Piano di intervento graduale e sostenibile</div>
+            <div class="service-block__detail">Trattamenti di ristrutturazione interna</div>
+            <div class="service-block__detail">Monitoraggio nel tempo dei progressi</div>
+          </div>
+        </div>
+
+      </article>
+
+      <!-- SERVIZIO 4: Trattamenti -->
+      <article class="service-block reverse" id="trattamenti" aria-labelledby="trattamenti-title">
+
+        <div class="service-block__image" aria-hidden="true">
+          <div class="service-block__image-inner" style="background: url('img/4.jpeg') center/cover no-repeat;">
+            <span class="service-block__image-label">04</span>
+          </div>
+        </div>
+
+        <div class="service-block__content container fade-in" style="max-width: none;">
+          <p class="service-block__number">Servizio 04</p>
+          <h2 class="service-block__title" id="trattamenti-title">
+            Trattamenti<br/>Capillari Esclusivi
+          </h2>
+          <p class="service-block__desc">
+            La salute del capello è il prerequisito di qualsiasi risultato estetico. Utilizziamo protocolli di trattamento selezionati da linee professionali di alto livello, scelti in funzione della specificità del capello di ogni cliente.
+          </p>
+          <p class="service-block__desc">
+            Dalla nutrizione intensiva alla ristrutturazione cheratinizzante, ogni trattamento è abbinato a un programma di cura domiciliare coerente e personalizzato.
+          </p>
+
+          <div class="service-block__details">
+            <div class="service-block__detail">Valutazione tricologica di base</div>
+            <div class="service-block__detail">Trattamenti nutritivi, idratanti e ristrutturanti</div>
+            <div class="service-block__detail">Protocolli per capelli trattati chimicamente</div>
+            <div class="service-block__detail">Programma domiciliare personalizzato</div>
+          </div>
+        </div>
+
+      </article>
+
+    </div>
+
+    <!-- ===================== SERVICES CTA ===================== -->
+    <section class="services-cta" aria-label="Invito alla consulenza">
+      <div class="services-cta__inner fade-in">
+        <p class="label" style="margin-bottom: 1rem;">Prima di tutto</p>
+        <h2 class="services-cta__title">
+          Ogni servizio inizia<br/>con una <em style="font-style: italic; color: var(--terracotta);">conversazione</em>.
+        </h2>
+        <p class="services-cta__body">
+          Non accettiamo prenotazioni senza una consulenza preliminare. Questo ci permette di comprendere le aspettative, valutare la situazione reale e proporre un piano d'intervento coerente e onesto.
+        </p>
+        <a href="https://www.instagram.com/fabiogrisanti/" class="btn btn-outline">Prenota subito il tuo appuntamento</a>
+      </div>
+    </section>
+
+    <!-- ===================== CONSULENZA ===================== -->
+    <section class="consulenza section" id="consulenza" aria-labelledby="consulenza-heading">
+      <div class="container">
+        <div class="consulenza__grid">
+
+          <div class="fade-in">
+            <p class="label" style="margin-bottom: 1rem;">Come iniziare</p>
+            <h2 class="consulenza__title" id="consulenza-heading">
+              Richiedi una<br/>consulenza personalizzata
+            </h2>
+            <p class="consulenza__body">
+              La consulenza iniziale è il momento in cui ascoltiamo, osserviamo e valutiamo. Non è un appuntamento commerciale: è il punto di partenza di un percorso.
+            </p>
+            <p class="consulenza__body">
+              Viene condotta direttamente da Fábio Grisanti e include l'analisi visiva del capello, la discussione delle aspettative e la presentazione di un piano d'intervento realistico.
+            </p>
+
+            <ul class="consulenza__points" aria-label="Cosa include la consulenza">
+              <li class="consulenza__point">Analisi della struttura e dello stato attuale del capello</li>
+              <li class="consulenza__point">Valutazione morfologica del volto e della silhouette</li>
+              <li class="consulenza__point">Discussione degli obiettivi estetici a breve e lungo termine</li>
+              <li class="consulenza__point">Proposta di piano d'intervento dettagliato</li>
+              <li class="consulenza__point">Stima dei tempi e delle sessioni necessarie</li>
+            </ul>
+          </div>
+
+          <!-- Contact Box -->
+          <div class="contact-box fade-in fade-in-delay-2">
+            <h3 class="contact-box__title">Prenota la tua consulenza</h3>
+
+            <div class="contact-row">
+
+              <div class="contact-item">
+                <p class="contact-item__label">Telefono</p>
+                <p class="contact-item__value">
+                  <a href="tel:+393294049704">+39 329 404 9704</a>
+                </p>
+              </div>
+
+              <div class="contact-item">
+                <p class="contact-item__label">Email</p>
+                <p class="contact-item__value">
+                  <a href="mailto:fabio.grisanti@hotmail.com">fabio.grisanti@hotmail.com</a>
+                </p>
+              </div>
+
+              <div class="contact-item">
+                <p class="contact-item__label">Indirizzo</p>
+                <p class="contact-item__value">
+                  Via casella 45<br/>
+                  Milan, Italy 20156
+                </p>
+              </div>
+
+              <div class="contact-item">
+                <p class="contact-item__label">Orari</p>
+                <p class="contact-item__value">
+                  Martedì – Sabato<br/>
+                  09:00 – 13:00<br/>
+                  14:00 – 19:00
+                </p>
+              </div>
+
+            </div>
+
+            <div class="contact-box__divider" aria-hidden="true"></div>
+
+            <a href="https://www.instagram.com/fabiogrisanti/" target="_blank" class="btn-cta-dark">Richiedi un appuntamento</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+   <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <p class="footer__brand-name">Fábio Grisanti</p>
+          <p class="footer__brand-tag">Parrucchieri · Milano</p>
+          <p class="footer__brand-desc">
+            Esperienza estetica di alto profilo. Diagnosi personalizzata, strategia d'immagine e tecnica internazionale al servizio dell'identità del cliente.
+          </p>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Navigazione</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Storia &amp; Formazione</a></li>
+            <li><a href="services.html">Servizi</a></li>
+            <li><a href="services.html#consulenza">Consulenza</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Contatti</p>
+          <div class="footer__info">
+            <p>Via casella 45</p>
+            <p>Milan, Italy 20156</p>
+            <br/>
+            <p>+39 329 404 9704</p>
+            <p>fabio.grisanti@hotmail.com</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          © 2026 Fábio Grisanti Parrucchieri. Tutti i diritti riservati.
+        </p>
+        <p class="footer__copyright">
+          Milano · Eccellenza Italiana
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" aria-label="Torna all'inizio">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
